@@ -1,40 +1,39 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<h2 align="center"> Automatic Question-paper generator </h2>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+<p align="center"> Automatic Question-paper generator is a web application build with PHP's Laravel Framefowk (Version 5.4). The use of this application is to generate question papers based on the specifications given by the user.This application needs a database of questions to generate question sets.A subject, Department, Questions and New Users can be added and managed very easily.Users can download or print the pdf version of the generated question paper. Every question paper is saved in the database for future usages. The user can add as many questions as he/she wants. The user also can create an unlimited number of Question papers (PDFs).</p>
 
-## About Laravel
+<h3>Technical specifications</h3>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+```diff
++ Languages used: HTML,CSS,JS,PHP (Laravel-5.4).
++ Database used : SQL Server.
++ Blade syntax used very frequently.
++ Cross-Site Request Forgery (CSRF) Protected useing csrf token.
++ Laravel's native Bcrypt used for Hashing passwords.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 10 tables used in the database
+- Database collation: utf8mb4_unicode_ci
+```
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+<h3>Use Case Modeling and Description</h3>
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+* When the application starts the user authentication takes place.
+* After successful user authentication, the program will show Dashboard of details entry about Departments, Subjects, Broad questions and MCQ’s and then asks for number of questions to be generated in written or as in MCQ.
+* Clicking on the left side Department Bar this will show Add department and Manage Department sections.
+* Then clicking on the Subjects Bar this will show Add subject and Manage subject sections.
+* Next comes the Question bank Bar includes Broad Question and MCQ unit.
+* In Broad question dropdown bar it also have Add and Manage section as well.
+* For question entry click to ADD in Broad Question and MCQ unit to add both types of questions.
+* In Broad question entry page there will be an upper Dropdown box section for designing the final question paper look. That section will have column like ( Department, Subject, Chapter, Question type, Difficulty level, Bloom’s level, Question marks, Appeared year, Question options, Duration of exam etc. ).
+* After adding a question it can keep as published or unpublished and there must a Edit and Delete button in Manage unit after clicking Save question box.
+* When the number of questions is specified, the user is asked for mentioning the particular subject and topics to be referred from previously stored question banks.
+* Finally the user needs to select the difficulty level for generating the test paper.
+* To add any question into question bank unit user must check mark (✔) or use radio button for each option given in question add area or box.
+* Questions adding box will have options button for Marks (1/2/3/4/5), Grade (Easy, Medium, Hard), Question importance level (*, **, ***) , Bloom’s Taxonomy Level (LOCQ , IOCQ  , HOCQ) .
+* After specifying these level, the user has to click on the “Generate Paper” button which results into successful generation of question paper using randomization by means of shuffling algorithm.
+* Before auto generating a question paper set, user can choose his/her desired number of questions and also from which chapter he/she wants them within his/her expected question type or based on total question marks.
+* After generating a question paper it can further edited manually by user.
+* In question bank unit there will be also some additional buttons like SEARCH, ADD, EDIT, DELETE, Next page, Previous page etc.
+* A new question can be added to the bank at any instance. Different sets of test papers could be generated without any limitation.
+* Generated question paper can be Save, Download, Print or Send in users given E-mail address by specific buttons. User can easily find the final generated paper when he/she wants.
+In keeping with the sincere to provide complete educational solutions and knowledge, Smart Question Paper Generator Software takes over the entire task and does the manual, laborious work swiftly and efficiently. 
